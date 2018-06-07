@@ -12,10 +12,16 @@ Usage:
     
 var YqmwDate;
         $(document).ready(function () {
-
             YqmwDate = $(document).YqmwDateSelect({
-                DateTypes: {
-             
+               DateTypes: {
+                    YearValue: 15,   //Year type value
+                    YearShow: true,
+                    QuarterValue: 14,
+                    QuarterShow: true,
+                    MonthValue: 13,
+                    MonthShow: true,
+                    WeekValue: 12,
+                    WeekShow: false
                 },
                 DateType: 3,
                 YearObjID: '#fmSetPerformance #WSDateYear',
