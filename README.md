@@ -1,6 +1,11 @@
 # Yqmwdateselect
 Year,Quarter,Month,Week select components for js
 
+![Year](https://github.com/LeoXionggg/Yqmwdateselect/blob/master/y.jpg)
+![Quarter](https://github.com/LeoXionggg/Yqmwdateselect/blob/master/q.jpg)
+
+![Month](https://github.com/LeoXionggg/Yqmwdateselect/blob/master/m.jpg)
+![Week](https://github.com/LeoXionggg/Yqmwdateselect/blob/master/w.jpg)
 
 require Jquery and easyui
 
@@ -22,16 +27,17 @@ $(document).ready(function () {
             MonthValue: 13,
             MonthShow: true,
             WeekValue: 12,
-            WeekShow: false
+            WeekShow: true
         },
-        DateType: 3,
-        YearObjID: '#fmSetPerformance #WSDateYear',
-        DateValObjID: '#fmSetPerformance #WSDateVal',
-        LastNowNextBtnObjID: '#fmSetPerformance #spanDateButton',
+        DateType: 13,
+        YearObjID: '#WSDateYear',
+        DateValObjID: '#WSDateVal',
+        LastNowNextBtnObjID: '#spanDateButton',
         ShowLastNowNextBtn: true,
-        ShowDateType: false,
+        ShowDateType: true,
+        DateTypeObjID: '',
         DateTypeName: 'WSType',
-        DateTypeObjID: '#fmSetPerformance #spanWSType',
+        DateTypeObjID: '#spanWSType',
         DateInfoObjID: '#spanDateInfo',
         ReadOnly: false,
         CallMethod: function () {
@@ -42,24 +48,13 @@ $(document).ready(function () {
 ```
 
 ```html
-<form id="fmSetPerformance" method="post">
-    <div style="text-align:center;padding:20px;font-size:16px;border-bottom:dashed 1px #ccc;">
-        <span id="spanWSType"></span>
-        <div style="padding-top:20px;">
-            <span id="spanDateButton"></span>
-        </div>
-    </div>    
-    <div style="padding:10px;">
-        <b> 时间：</b>
-         <span id="spanWSDateYear">
-            <input name="WSDateYear" id="WSDateYear" style="width:90px;" />
-        </span>
-        <span id="spanWSDateValue">
-            <input name="WSDateVal" id="WSDateVal" style="width:80px;" />
-        </span>
-        <div style="padding:10px 70px;">
-            [<span id="spanDateInfo"></span>]
-        </div>
-    </div>
-</form>
+<span id="spanWSType"></span>
+<div style="padding-top:10px;">
+    <span id="spanDateButton"></span>
+</div>
+<div style="padding:10px;"> 
+        <input name="WSDateYear" id="WSDateYear" style="width:90px;" /> 
+        <input name="WSDateVal" id="WSDateVal" style="width:80px;" /> 
+</div>
+<div style="padding:10px;">[<span id="spanDateInfo"></span>]</div>
 ```
